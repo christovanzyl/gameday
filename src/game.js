@@ -1,22 +1,28 @@
 import React, {Component} from 'react';
 import './App.css';
 
+import Rock from "../public/img/Rock.png"
+import Paper from "../public/img/Paper.png"
+import Scissors from "../public/img/Scissors.png"
 
+// a list that holds the color and images for the game
 const PlayerCard = ({color, symbol}) => {
   const style = {
     backgroundColor: color,
-    backgroundImage:  "url(./img/" + symbol + ".png)"
+    backgroundImage:  symbol
   }
+//  
   return(
     <div style={style} className="player-card">
     </div>
   )
+
 }
 export default class Game extends Component {
 
   constructor(props) {
     super(props)
-    this.symbols = ["Rock", "Paper", "Scissors"]
+    this.symbols = [Rock, Paper, Scissors]
     this.state = {}
   }
 
@@ -25,9 +31,9 @@ export default class Game extends Component {
     if(playerRed == playerBlue) {
       return "it's a draw !"
     }
-    if((playerBlue==="Rock" && playerRed==="Scissors") ||
-       (playerBlue==="Paper" && playerRed==="Rock") ||
-       (playerBlue==="Scissors" && playerRed==="Paper")) {
+    if((playerBlue===Rock && playerRed===Scissors) ||
+       (playerBlue===Paper && playerRed===Rock) ||
+       (playerBlue===Scissors && playerRed===Paper)) {
         return "Blue player wins !"
        }
         return "Red player wins !"       
@@ -64,7 +70,6 @@ export default class Game extends Component {
               symbol={this.state.playerBlue} />
               <p>{this.state.winner}</p>
             <button onClick={this.runGame}>Run Game</button>
-            <button>Restart</button>
           </div>          
         </div>
       </div>
