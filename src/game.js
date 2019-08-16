@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
 
-import Rock from "../public/img/Rock.png"
-import Paper from "../public/img/Paper.png"
-import Scissors from "../public/img/Scissors.png"
+import Rock from "../img/Rock.png"
+import Paper from "../img/Paper.png"
+import Scissors from "../img/Scissors.png"
 
 // a list that holds the color and images for the game
 const PlayerCard = ({color, symbol}) => {
