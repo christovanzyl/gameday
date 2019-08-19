@@ -47,11 +47,13 @@ class App extends Component {
         </div>
           <h2>The Real story</h2>
           {/* the images that the map contains */}
-          <div className="img"><img src={user.picture1} /></div>
-          <div className="img"><img src={user.picture2} /></div>
-          <div className="img"><img src={user.picture3} /></div>
-          <div className="img"><img src={user.picture4} /></div>
-        </div>
+          <div id="story">
+            <div className="img"><img src={user.picture1} /></div>
+            <div className="img"><img src={user.picture2} /></div>
+            <div className="img"><img src={user.picture3} /></div>
+            <div className="img"><img src={user.picture4} /></div>
+          </div>
+      </div>
     )
   }
 }
