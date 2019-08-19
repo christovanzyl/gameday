@@ -1,31 +1,32 @@
 import React, {Component} from 'react';
 import './App.css';
-
-import Rock from "../img/Rock.png"
-import Paper from "../img/Paper.png"
-import Scissors from "../img/Scissors.png"
+// linked a folder that contains images used in the game
+import Rock from "./img/rock.png"
+import Paper from "./img/paper.png"
+import Scissors from "./img/scissors.png"
 
 // a list that holds the color and images for the game
 const PlayerCard = ({color, symbol}) => {
   const style = {
     backgroundColor: color,
-    backgroundImage:  symbol
+    backgroundImage:  `url(${symbol})`
   }
-//  
+// returning the information of the list above 
   return(
     <div style={style} className="player-card">
     </div>
   )
 
 }
+// a comonent that holds the content of the game that is being played
 export default class Game extends Component {
 
-  constructor(props) {
+    constructor(props) {
     super(props)
     this.symbols = [Rock, Paper, Scissors]
     this.state = {}
   }
-
+// a function that allows the server to understand the rules of the game
   decideWinner = () => {
     const {playerBlue, playerRed} = this.state
     if(playerRed == playerBlue) {
@@ -38,7 +39,7 @@ export default class Game extends Component {
        }
         return "Red player wins !"       
   }
-
+// lets the server know how much time it should run the chances before revealing the final outcome
   runGame = () => {
     let counter = 0
     let myInterval = setInterval(() => {
@@ -55,7 +56,7 @@ export default class Game extends Component {
     },100)     
   }
 
-
+// diplays the information of the game that is played
   render() {
     return(
       <div className="App">

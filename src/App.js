@@ -1,23 +1,23 @@
 import React, {Component} from 'react';
 import './App.css';
+// linked other components to this page
 import About from './about'
 import Help from './help'
 import Game from './game'
+// linked images to this page
 import './pic1.jpg'
 import './pic2.jpg'
 import './pic3.jpg'
 import './pic4.jpg'
-// a map that contains imgages
+
+// a map that contains images
 const user = {
     picture1: require ('./pic1.jpg'),
     picture2: require ('./pic2.jpg'),
     picture3: require ('./pic3.jpg'),
     picture4: require ('./pic4.jpg'),
 }
-
-
-
-
+// a component that holds all the information of all the other components
 class App extends Component {
   // a prompt that allows the user to enter the game
   state = {

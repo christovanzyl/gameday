@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
 
-
+// a component that hold the history of the game 
 export default class About extends Component {
     render() {
         return(
+            // a div that contains the information abot the history of the game
             <div className="about">
                 <div>
                     <p>The earliest form of Rock Paper Scissors was created in Japan and is called Janken.
@@ -15,11 +16,10 @@ export default class About extends Component {
                        have been most common since the modern version of the game was created in the late 19th Century.
                        This was between the Edo and Meiji periods.
                     </p>
-                    <p>
-                    By the early 20th century, Rock Paper Scissors had spread beyond Asia, especially through increased Japanese contact with the West. 
-                    Its English language name is therefore taken from a translation of the names of the three Japanese hand-gestures for rock, paper and scissors;
-                    elsewhere in Asia the open-palm gesture represents “cloth” rather than “paper”.
-                    The shape of the scissors is also adopted from the Japanese style.
+                    <p>By the early 20th century, Rock Paper Scissors had spread beyond Asia, especially through increased Japanese contact with the West. 
+                       Its English language name is therefore taken from a translation of the names of the three Japanese hand-gestures for rock, paper and scissors;
+                       elsewhere in Asia the open-palm gesture represents “cloth” rather than “paper”.
+                       The shape of the scissors is also adopted from the Japanese style.
                     </p>
                 </div>
             </div>
